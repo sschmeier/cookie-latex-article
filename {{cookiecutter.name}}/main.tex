@@ -72,6 +72,15 @@
 \usepackage{fontspec}
 \setmainfont{Arial}
 
+% use OpenSans if available
+\defaultfontfeatures{
+    Ligatures = TeX,
+    Path      = ./Fonts/ }
+
+\IfFileExists{./Fonts/OpenSans-Light.ttf}{
+    \setmainfont[ BoldFont = OpenSans-SemiBold, ItalicFont = OpenSans-LightItalic ]{OpenSans-Light}
+    \setsansfont[ BoldFont = OpenSans-SemiBold, ItalicFont = OpenSans-LightItalic ]{OpenSans-Light}
+}{}
 
 %%  icons
 \usepackage{fontawesome}
@@ -85,7 +94,7 @@
 %% allow html 
 \usepackage[dvipsnames]{xcolor}
 \definecolor{MyBlue}{HTML}{3c4f68}
-\definecolor{light-gray}{gray}{0.95} %% good for source-code background
+\definecolor{light-gray}{gray}{0.975} %% good for source-code background
 
 %% Colors that work well
 %% xcolor: MidnightBlue, Sepia 
@@ -113,6 +122,7 @@
 %% FOOTER and HEADER
 \usepackage{lastpage}
 \usepackage{fancyhdr}
+
 \pagestyle{fancy}
 \fancyhf{}%
 \fancyhead[R]{
