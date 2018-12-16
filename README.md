@@ -1,4 +1,4 @@
-# Cookiecutter latex template
+# Cookiecutter latex article template
 
 ## Setup
 Install cookiecutter:
